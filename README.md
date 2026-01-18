@@ -26,20 +26,31 @@ python main.py
 
 ### 3. Example
 ```
-=== 佳句採集器 ===
-1. 新增佳句
-2. 瀏覽佳句
-3. 離開
-請選擇功能 (1/2/3): 1
-請輸入佳句：天下沒有白癡的晚餐
-請輸入作者（若無可直接 Enter）：yishan-s
+=== Quotes Collector ===
+1. Add Quote
+2. Browse Quotes
+3. Exit
+Select an option (1/2/3): 1
+Input Quote: Time is money
+Input Author (optional): Tome and Jerry
 佳句已儲存！
-=== 佳句採集器 ===
-1. 新增佳句
-2. 瀏覽佳句
-3. 離開
-請選擇功能 (1/2/3): 2
---- 目前共有 1 句收藏 ---
+
+=== Quotes Collector ===
+1. Add Quote
+2. Browse Quotes
+3. Exit
+Select an option (1/2/3): 2
+
+--- 目前共有 3 句收藏 ---
 1. 「天下沒有白癡的晚餐」 —— yishan-s
+2. 「It's harder to read code than to write it」 —— Unknown
+3. 「Time is money」 —— Tome and Jerry
 ----------------------------------
+
+=== Quotes Collector ===
+1. Add Quote
+2. Browse Quotes
+3. Exit
+Select an option (1/2/3): 3
+Bye Bye!
 ```
