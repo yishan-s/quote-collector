@@ -4,19 +4,20 @@ import os
 DATA_FILE = "quotes.json"
 
 def load_quotes():
-    # 如果檔案不存在，回傳空列表
+    # 如果檔案不存在，回傳空列表，避免 FileNotFoundError
     if not os.path.exists(DATA_FILE):
         return []
     try:
+        # with open 可確保檔案使用完畢後會自動關閉 可避免 Memory Leaking
         with open(DATA_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except (json.JSONDecodeError, IOError):
+            return json.load(f) # 將 JSON 轉換成 Python
+    except (json.JSONDecodeError, IOError): # 檔案存在但損毀 則報 JSONDecodeError（格式錯誤）和 IOError
         return []
 
 def save_quotes(quotes):
     # w: if file exists, overwrite(kinda dangerous), else create it
     with open(DATA_FILE, "w", encoding="utf-8") as f:
-        # ensure_ascii=False 讓中文能正常顯示
+        # ensure_ascii=False to display Chinese correctly
         json.dump(quotes, f, ensure_ascii=False, indent=4)
 
 def add_quote(quotes):
