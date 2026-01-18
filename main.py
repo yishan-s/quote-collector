@@ -41,3 +41,27 @@ def show_quotes(quotes):
     for idx, q in enumerate(quotes, 1):
         print(f"{idx}. 「{q['content']}」 —— {q['author']}")
     print("----------------------------------\n")
+
+def main():
+    quotes = load_quotes()
+    
+    while True:
+        print("\n=== 佳句採集器 ===")
+        print("1. 新增佳句")
+        print("2. 瀏覽佳句")
+        print("3. 離開")
+        
+        choice = input("請選擇功能 (1/2/3): ")
+        
+        if choice == "1":
+            add_quote(quotes)
+        elif choice == "2":
+            show_quotes(quotes)
+        elif choice == "3":
+            print("Bye Bye! 👋")
+            break
+        else:
+            print("無效輸入，請重試。")
+
+if __name__ == "__main__":
+    main()
