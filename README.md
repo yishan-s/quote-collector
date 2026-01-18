@@ -19,7 +19,7 @@ This project serves as a practice exercise to hone my Python skills, specificall
 git clone https://github.com/your-username/quote-collector.git
 cd quote-collector
 ```
-### 2. Run
+### 2. Run the script
 ```
 python main.py
 ```
