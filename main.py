@@ -30,7 +30,7 @@ def add_quote(quotes):
     
     quotes.append(quote)
     save_quotes(quotes) # 每次新增就存檔
-    print("✅ 佳句已儲存！")
+    print("佳句已儲存！")
 
 def show_quotes(quotes):
     if not quotes:
@@ -58,7 +58,7 @@ def main():
         elif choice == "2":
             show_quotes(quotes)
         elif choice == "3":
-            print("Bye Bye! 👋")
+            print("Bye Bye!")
             break
         else:
             print("無效輸入，請重試。")
