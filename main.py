@@ -14,13 +14,14 @@ def load_quotes():
         return []
 
 def save_quotes(quotes):
+    # w: if file exists, overwrite(kinda dangerous), else create it
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         # ensure_ascii=False 讓中文能正常顯示
         json.dump(quotes, f, ensure_ascii=False, indent=4)
 
 def add_quote(quotes):
-    content = input("請輸入佳句：")
-    author = input("請輸入作者（若無可直接 Enter）：")
+    content = input("Input Quote: ")
+    author = input("Input Author (optional): ")
     
     # 建立字典
     quote = {
@@ -29,7 +30,7 @@ def add_quote(quotes):
     }
     
     quotes.append(quote)
-    save_quotes(quotes) # 每次新增就存檔
+    save_quotes(quotes) 
     print("佳句已儲存！")
 
 def show_quotes(quotes):
@@ -46,12 +47,12 @@ def main():
     quotes = load_quotes()
     
     while True:
-        print("\n=== 佳句採集器 ===")
-        print("1. 新增佳句")
-        print("2. 瀏覽佳句")
-        print("3. 離開")
+        print("\n=== Quotes Collector ===")
+        print("1. Add Quote")
+        print("2. Browse Quotes")
+        print("3. Exit")
         
-        choice = input("請選擇功能 (1/2/3): ")
+        choice = input("Select an option (1/2/3): ")
         
         if choice == "1":
             add_quote(quotes)
@@ -61,7 +62,7 @@ def main():
             print("Bye Bye!")
             break
         else:
-            print("無效輸入，請重試。")
+            print("Invalid input. Try again!")
 
 if __name__ == "__main__":
     main()
