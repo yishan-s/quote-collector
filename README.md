@@ -20,7 +20,9 @@ git clone https://github.com/your-username/quote-collector.git
 cd quote-collector
 ```
 ### 2. Run
-`python main.py`
+```
+python main.py
+```
 
 ### 3. Example
 === 佳句採集器 ===
